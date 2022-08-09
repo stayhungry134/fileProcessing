@@ -11,10 +11,10 @@ import re
 
 
 # 初始文件夹
-src_path = 'F:/个人文件/个人相册/相机/聚会/'
+src_path = 'E:/个人文件/个人相册/手机相机备份/'
 
 # 目标文件夹
-dst_path = 'F:/个人文件/个人相册/手机相机备份/'
+dst_path = 'E:/个人文件/个人相册/相机/'
 
 # 相册列表
 img_list = os.listdir(src_path)
@@ -37,8 +37,13 @@ def order_img():
             os.mkdir(aims_path)
         else:
             pass
+
         for image in images:
             # print(src_path + image + '----->' + aims_path + '/' + image[:3] + '_' + image[3:11] + '_' + image[11:])
             # print(src_path + image + '----->' + aims_path + '/' + image)
-            os.rename(src_path + image, aims_path + '/' + image)
+            try:
+                os.rename(src_path + image, aims_path + '/' + image)
+                print(src_path + image + '----->' + aims_path + '/' + image)
+            except:
+                pass
 order_img()
