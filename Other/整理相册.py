@@ -7,14 +7,13 @@ Description:  通过相册的文件名整理相册到相应文件夹
 """
 
 import os
-import re
 
 
 # 初始文件夹
-src_path = 'E:/个人文件/个人相册/手机相机备份/'
+src_path = 'F:/个人文件/相机/'
 
 # 目标文件夹
-dst_path = 'E:/个人文件/个人相册/相机/'
+dst_path = 'F:/个人文件/个人相册/相机/'
 
 # 相册列表
 img_list = os.listdir(src_path)

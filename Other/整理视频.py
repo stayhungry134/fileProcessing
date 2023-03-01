@@ -11,10 +11,10 @@ import os
 
 
 # 初始文件夹
-src_path = 'E:/个人文件/个人视频/2018——2020/'
+src_path = 'F:/个人文件/视频/'
 
 # 目标文件夹
-dst_path = 'E:/个人文件/个人视频/'
+dst_path = 'F:/个人文件/个人视频/'
 
 # 相册列表
 video_list = os.listdir(src_path)
@@ -26,9 +26,9 @@ camera_video = [video for video in video_list if video[:3] == 'VID']
 dir_list = list(set(map(lambda video: video[4:10], camera_video)))
 
 
-# 整理相册
+# 整理视频
 def order_video():
-    # 每个月的图片
+    # 每个月的视频
     for dir in dir_list:
         videos = [video for video in camera_video if video[4:10] == dir]
         # 创建目录

@@ -1,7 +1,7 @@
 import csv
 import pdfkit
 
-# with open('../.files/learn_word.csv', 'r') as csv_file:
+# with open('../files/learn_word.csv', 'r') as csv_file:
 #     reader = csv.reader(csv_file)
 #     # for i in reader:
 #     #     print(i)

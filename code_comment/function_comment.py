@@ -40,7 +40,7 @@ class FunctionComment():
                 res = re.findall(r'def \w*[^)]*\):\s*[\'\'\'|\"\"\"]+[^\'\'\'|^\"\"\"\"]*', f.read())
                 with open('{}/med.md'.format(file_path), 'a+', encoding='utf-8') as m:
                     print(file)
-                    m.write("## {}\n".format(file.split("_")[0]))
+                    m.write("## {}\n".format(file.split(".")[0]))
                     for api in res:
                         m.writelines(api.replace('def ', '\n').replace("\n", '').replace(" ", "").replace("'''", "(").replace('"""', '('))
                         m.write('\n')
@@ -54,7 +54,8 @@ class FunctionComment():
         with open('{}/med.md'.format(file_path), encoding='utf-8') as md:
             with open('{}/{}.md'.format(file_path, self.project_name), 'a+', encoding='utf-8') as api_file:
                 for line in md.readlines():
-                    if line[:2] == "##":
+                    # if line[:2] == "##":
+                    if line.startswith("##"):
                         api_file.writelines(line)
                     else:
                         try:
@@ -70,8 +71,8 @@ class FunctionComment():
         self.generate_document()
 
 
-file_path = '../.files'
-project_name = 'xmall'
+file_path = '../files'
+project_name = 'other'
 
 fun = FunctionComment(file_path, project_name)
 # fun.walk_folder()
