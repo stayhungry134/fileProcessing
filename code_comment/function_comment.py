@@ -23,7 +23,7 @@ class FunctionComment():
         # 判断项目名称是否为文件夹
         self.file_path = os.path.join(self.file_path, self.project_name)
         if os.path.isdir(self.file_path):
-            # self.files = [file for file in os.walk(project_path)][0][2]
+            # self.0_files = [file for file in os.walk(project_path)][0][2]
             self.files = list(os.walk(self.file_path))[0][2]
             print(self.files)
         else:
@@ -71,7 +71,7 @@ class FunctionComment():
         self.generate_document()
 
 
-file_path = '../files'
+file_path = '../0_files'
 project_name = 'other'
 
 fun = FunctionComment(file_path, project_name)

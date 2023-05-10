@@ -14,7 +14,7 @@ from wordcloud import WordCloud
 
 dirpath = "F:/2021/"
 words = []
-stopwords = [i.strip() for i in open('../files/hit_stopwords.txt', encoding='utf-8').readlines()]
+stopwords = [i.strip() for i in open('../0_files/hit_stopwords.txt', encoding='utf-8').readlines()]
 
 
 def get_text(filepath):
@@ -46,7 +46,7 @@ wc = WordCloud(background_color="white",  # 设置背景颜色
                # min_font_size=50,
                # width=2000,
                # height=3000,
-               mask=np.array(Image.open('../files/heart.jpg')),  # 选择背景图片
+               mask=np.array(Image.open('../0_files/heart.jpg')),  # 选择背景图片
                font_path='C:/Windows/Fonts/simhei.ttf',  # 设置字体
                )
 

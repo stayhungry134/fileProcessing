@@ -15,7 +15,7 @@ def counter_num(page_str):
         page_dic[item] += 1
 
 
-with open('../files/123.txt', 'r', encoding='utf-8') as f:
+with open('../0_files/123.txt', 'r', encoding='utf-8') as f:
     pages = f.readlines()
     for page in pages:
         counter_num(page)

@@ -42,7 +42,7 @@ for file in filepaths:
 
 items = list(count.items())
 items.sort(key=lambda x: x[1], reverse=True)
-with open('../files/dairywords.txt', 'w+', encoding='utf-8') as f:
+with open('../0_files/dairywords.txt', 'w+', encoding='utf-8') as f:
     for i in range(100):
         word, count = items[i]
         f.writelines("{:<5} --> {:>6}\n".format(word, count))
