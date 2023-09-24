@@ -1,5 +1,5 @@
 """
-File Name: pdf to word
+File Name: pdf_to_word
 Author: Ethan
 date: 12/6/2021
 Description: 使用 Python 将 PDF 文件转换为 Word 文件
