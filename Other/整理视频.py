@@ -11,10 +11,10 @@ import os
 
 
 # 初始文件夹
-src_path = 'F:/个人文件/视频/'
+src_path = 'F:/OneDrive/PersonalFiles/视频/'
 
 # 目标文件夹
-dst_path = 'F:/个人文件/个人视频/'
+dst_path = 'F:/OneDrive/PersonalFiles/个人视频/'
 
 # 相册列表
 video_list = os.listdir(src_path)

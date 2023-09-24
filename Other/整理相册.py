@@ -10,10 +10,10 @@ import os
 
 
 # 初始文件夹
-src_path = 'F:/个人文件/相机/'
+src_path = 'F:/OneDrive/PersonalFiles/相机/'
 
 # 目标文件夹
-dst_path = 'F:/个人文件/个人相册/相机/'
+dst_path = 'F:/OneDrive/PersonalFiles/个人相册/相机/'
 
 # 相册列表
 img_list = os.listdir(src_path)
@@ -43,6 +43,7 @@ def order_img():
             try:
                 os.rename(src_path + image, aims_path + '/' + image)
                 print(src_path + image + '----->' + aims_path + '/' + image)
-            except:
-                pass
+            except FileExistsError:
+                # 如果文件已存在，则删除原文件
+                os.remove(src_path + image)
 order_img()
